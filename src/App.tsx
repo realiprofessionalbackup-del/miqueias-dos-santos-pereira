@@ -316,16 +316,16 @@ export default function App() {
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              "Comecei com 3 unidades e vendi no mesmo fim de semana.",
-              "Peguei o kit inicial e já fiz o primeiro giro rápido.",
-              "Produto de saída fácil porque o resultado convence."
-            ].map((text, i) => (
+              { text: "Comecei com 3 unidades e vendi no mesmo fim de semana.", name: "Ricardo Oliveira" },
+              { text: "Peguei o kit inicial e já fiz o primeiro giro rápido.", name: "Juliana Santos" },
+              { text: "Produto de saída fácil porque o resultado convence.", name: "Marcos Pereira" }
+            ].map((item, i) => (
               <div key={i} className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 relative">
                 <div className="text-orange-500 mb-4 flex gap-1">
                   {[...Array(5)].map((_, i) => <Zap key={i} size={16} fill="currentColor" />)}
                 </div>
-                <p className="italic text-zinc-300 mb-6">"{text}"</p>
-                <p className="text-sm font-bold text-zinc-500">— Cliente revendedor(a)</p>
+                <p className="italic text-zinc-300 mb-6">"{item.text}"</p>
+                <p className="text-sm font-bold text-zinc-500">— {item.name}</p>
               </div>
             ))}
           </div>
