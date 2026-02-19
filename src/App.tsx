@@ -57,15 +57,15 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#050505] text-white font-sans selection:bg-orange-500 selection:text-white">
       {/* Hero Section */}
-      <header className="relative overflow-hidden pt-20 pb-32 px-4">
+      <header className="relative overflow-hidden pt-12 md:pt-20 pb-20 md:pb-32 px-4">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#ff5f0033,transparent_70%)] pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-          <div className="text-center lg:text-left">
+        <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="text-center lg:text-left order-2 lg:order-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-sm font-bold uppercase tracking-widest mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs md:text-sm font-bold uppercase tracking-widest mb-6 md:mb-8"
             >
               <Zap size={16} /> Oportunidade Única
             </motion.div>
@@ -74,7 +74,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-[0.9]"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter mb-6 leading-[0.95] lg:leading-[0.9]"
             >
               SEJA DONO DO SEU <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400">
@@ -86,7 +86,7 @@ export default function App() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-zinc-400 mb-12 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-zinc-400 mb-8 md:mb-12 max-w-2xl mx-auto lg:mx-0"
             >
               Comece sua jornada empreendedora com um investimento mínimo e retorno garantido.
             </motion.p>
@@ -95,22 +95,22 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="bg-gradient-to-r from-[#ff5f00] to-[#ffcc00] p-8 rounded-3xl shadow-2xl shadow-orange-500/20"
+              className="bg-gradient-to-r from-[#ff5f00] to-[#ffcc00] p-6 md:p-8 rounded-3xl shadow-2xl shadow-orange-500/20"
             >
-              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div className="text-left">
-                  <p className="text-black/70 font-bold uppercase tracking-wider text-sm">Kit Inicial</p>
-                  <h2 className="text-black text-4xl font-black">3 UNIDADES</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-3 items-center justify-between gap-6 sm:gap-4">
+                <div className="text-center sm:text-left">
+                  <p className="text-black/70 font-bold uppercase tracking-wider text-[10px] md:text-xs">Kit Inicial</p>
+                  <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-black">3 UNIDADES</h2>
                 </div>
-                <div className="h-px w-full md:h-12 md:w-px bg-black/10" />
+                <div className="hidden sm:block h-12 w-px bg-black/10 mx-auto" />
                 <div className="text-center">
-                  <p className="text-black/70 font-bold uppercase tracking-wider text-sm">Investimento</p>
-                  <h2 className="text-black text-5xl font-black">R$ 297</h2>
+                  <p className="text-black/70 font-bold uppercase tracking-wider text-[10px] md:text-xs">Investimento</p>
+                  <h2 className="text-black text-3xl md:text-4xl lg:text-5xl font-black">R$ 297</h2>
                 </div>
-                <div className="h-px w-full md:h-12 md:w-px bg-black/10" />
-                <div className="text-right">
-                  <p className="text-black/70 font-bold uppercase tracking-wider text-sm">Custo Unitário</p>
-                  <h2 className="text-black text-4xl font-black">R$ 99</h2>
+                <div className="hidden sm:block h-12 w-px bg-black/10 mx-auto" />
+                <div className="text-center sm:text-right">
+                  <p className="text-black/70 font-bold uppercase tracking-wider text-[10px] md:text-xs">Custo Unitário</p>
+                  <h2 className="text-black text-2xl md:text-3xl lg:text-4xl font-black">R$ 99</h2>
                 </div>
               </div>
             </motion.div>
@@ -120,7 +120,7 @@ export default function App() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="relative group"
+            className="relative group order-1 lg:order-2 max-w-md mx-auto lg:max-w-none"
           >
             <div className="absolute -inset-4 bg-orange-500/20 blur-3xl rounded-full group-hover:bg-orange-500/30 transition-colors duration-500" />
             <div className="relative rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl">
@@ -135,15 +135,15 @@ export default function App() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 bg-zinc-900 border border-zinc-800 p-4 rounded-2xl shadow-xl hidden md:block"
+              className="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 bg-zinc-900 border border-zinc-800 p-3 md:p-4 rounded-2xl shadow-xl"
             >
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
-                  <CheckCircle2 size={20} />
+              <div className="flex items-center gap-2 md:gap-3">
+                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+                  <CheckCircle2 size={16} className="md:w-5 md:h-5" />
                 </div>
                 <div>
-                  <p className="text-xs text-zinc-500 font-bold uppercase">Qualidade</p>
-                  <p className="font-bold">100% Profissional</p>
+                  <p className="text-[10px] text-zinc-500 font-bold uppercase">Qualidade</p>
+                  <p className="text-xs md:text-sm font-bold">100% Profissional</p>
                 </div>
               </div>
             </motion.div>
